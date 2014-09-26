@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0845BFB7A208920EAC77C4FA /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B52EE07067F8C5F8EC749690 /* libPods-Tests.a */; };
-		325C6962CA9F31C4A13E87B2 /* libPods-ButtonsApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FE7A078C5C86BAF9833C47 /* libPods-ButtonsApp.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -82,7 +81,6 @@
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				6871D19E87A2D1E55C3505BE /* libPods-Artsy-UIButtons.a in Frameworks */,
-				325C6962CA9F31C4A13E87B2 /* libPods-ButtonsApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
