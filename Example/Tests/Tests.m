@@ -23,12 +23,12 @@ sharedExamplesFor(@"ar button", ^(NSDictionary *data) {
     });
 
     it(@"normal", ^{
-        expect(button).to.recordSnapshot();
+        expect(button).to.haveValidSnapshot();
     });
 
     it(@"disabled", ^{
         [button setEnabled:NO animated:NO];
-        expect(button).to.recordSnapshot();
+        expect(button).to.haveValidSnapshot();
     });
 });
 
@@ -49,8 +49,10 @@ describe(@"ARUppercaseButton", ^{
 });
 
 describe(@"ARMenuButton", ^{
-    ARMenuButton *button = [[ARMenuButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
-    expect(button).to.recordSnapshot();
+    it(@"looks correct", ^{
+        ARMenuButton *button = [[ARMenuButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+        expect(button).to.haveValidSnapshot();
+    });
 });
 
 describe(@"ARNavigationTabButton", ^{
@@ -59,7 +61,7 @@ describe(@"ARNavigationTabButton", ^{
 
     it(@"selected", ^{
         button.selected = YES;
-        expect(button).to.recordSnapshot();
+        expect(button).to.haveValidSnapshot();
     });
 });
 
@@ -89,17 +91,17 @@ sharedExamplesFor(@"flat button", ^(NSDictionary *data) {
     });
 
     it(@"normal", ^{
-        expect(button).to.recordSnapshot();
+        expect(button).to.haveValidSnapshot();
     });
 
     it(@"disabled", ^{
         [button setEnabled:NO animated:NO];
-        expect(button).to.recordSnapshot();
+        expect(button).to.haveValidSnapshot();
     });
 
     it(@"highlighted", ^{
         [button setHighlighted:YES animated:NO];;
-        expect(button).to.recordSnapshot();
+        expect(button).to.haveValidSnapshot();
     });
 });
 
