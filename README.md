@@ -2,7 +2,7 @@
 
 This is our styled `UIButton` subclasses repo.
 
-[![CI Status](http://img.shields.io/travis/Laura Brown/Artsy-UIButtons.svg?style=flat)](https://travis-ci.org/artsy/Artsy-UIButtons)
+[![CI Status](http://img.shields.io/travis/artsy/Artsy-UIButtons.svg?style=flat)](https://travis-ci.org/artsy/Artsy-UIButtons)
 
 ## Usage
 
