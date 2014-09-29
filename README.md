@@ -2,10 +2,7 @@
 
 This is our styled `UIButton` subclasses repo.
 
-[![CI Status](http://img.shields.io/travis/Laura Brown/Artsy-UIButtons.svg?style=flat)](https://travis-ci.org/Laura Brown/Artsy-UIButtons)
-[![Version](https://img.shields.io/cocoapods/v/Artsy-UIButtons.svg?style=flat)](http://cocoadocs.org/docsets/Artsy-UIButtons)
-[![License](https://img.shields.io/cocoapods/l/Artsy-UIButtons.svg?style=flat)](http://cocoadocs.org/docsets/Artsy-UIButtons)
-[![Platform](https://img.shields.io/cocoapods/p/Artsy-UIButtons.svg?style=flat)](http://cocoadocs.org/docsets/Artsy-UIButtons)
+[![CI Status](http://img.shields.io/travis/Laura Brown/Artsy-UIButtons.svg?style=flat)](https://travis-ci.org/artsy/Artsy-UIButtons)
 
 ## Usage
 
