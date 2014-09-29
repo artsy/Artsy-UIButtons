@@ -2,4 +2,4 @@ source 'https://rubygems.org'
 
 gem 'cocoapods'
 gem 'xcpretty'
-gem 'second_curtain', '~> 0.2'
+gem 'second_curtain', '0.2.4'
