@@ -1,6 +1,20 @@
 # reference: http://www.objc.io/issue-6/travis-ci.html
 
 language: objective-c
-# before_install: cd Example && pod install && cd -
+cache: bundler
+
+env:
+    global:
+        - UPLOAD_IOS_SNAPSHOT_BUCKET_NAME=uibuttons-snapshots
+        - secure: "bhCQbsey4xZhoqirOtKV/H2X2C9bR3YDH+NfRCQeEM5lgq+mk7EB9QmeE6Io+Fb6T2lKSEjnU8u+QV82Fuy358Z/RgeUcz9FZXA3oJR8TNUwdBU9OwL3q1vBrSXg2QqUtdld2ab3BDjzE7+Ja45PgsqrDX/8MkHQJTAy1/Fp3mk="
+        - secure: "Wj72iTvNTKkYpwjMeTe4rQ6u4xY+SVwAmjFD/pqIjW5BET4Cq6LP4Rt0VgtVO11B6tCktVE0VdnhS1zs+ljCCaEes7yVJziYTKgwNd/PY9Ll0F2AZsJ64fxTr6caRI/GUhq+dYPGASO3S716+muiN6eqwRgWWUWPpTy6urtPMbk="
+
+before_install:
+    - bundle install
+
+before_script:
+    - export LANG=en_US.UTF-8
+    - make ci
+
 script:
-- xctool test -workspace Example/Artsy-UIButtons.xcworkspace -scheme Artsy-UIButtons -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+    - make test
