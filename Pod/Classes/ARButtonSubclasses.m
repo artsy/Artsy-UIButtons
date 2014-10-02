@@ -37,12 +37,13 @@
 
 - (void)setEnabled:(BOOL)enabled
 {
-    [self setEnabled:enabled animated:YES];
+    [self setEnabled:enabled animated:self.shouldAnimateStateChange];
 }
 
 - (void)setEnabled:(BOOL)enabled animated:(BOOL)animated
 {
     [super setEnabled:enabled];
+    if (!self.shouldDimWhenDisabled) { return; }
     CGFloat alpha = enabled ? 1 : 0.5;
     [UIView animateIf:animated withDuration:ARButtonAnimationDuration :^{
         self.alpha = alpha;
@@ -51,6 +52,8 @@
 
 - (void)setup
 {
+    self.shouldDimWhenDisabled = YES;
+    self.shouldAnimateStateChange = YES;
     NSLog(@"ARButton shouldn't be used as it's an abstract class");
 }
 
@@ -130,12 +133,12 @@
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state
 {
-    [self setBackgroundColor:backgroundColor forState:state animated:YES];
+    [self setBackgroundColor:backgroundColor forState:state animated:self.shouldAnimateStateChange];
 }
 
 - (void)setBorderColor:(UIColor *)borderColor forState:(UIControlState)state
 {
-    [self setBorderColor:borderColor forState:state animated:YES];
+    [self setBorderColor:borderColor forState:state animated:self.shouldAnimateStateChange];
 
 }
 
@@ -194,12 +197,12 @@
 
 - (void)setSelected:(BOOL)selected
 {
-    [self setSelected:selected animated:YES];
+    [self setSelected:selected animated:self.shouldAnimateStateChange];
 }
 
 - (void)setHighlighted:(BOOL)highlighted
 {
-    [self setHighlighted:highlighted animated:YES];
+    [self setHighlighted:highlighted animated:self.shouldAnimateStateChange];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -321,7 +324,7 @@
 
 - (void)setColor:(UIColor *)color
 {
-    [self setColor:color animated:YES];
+    [self setColor:color animated:self.shouldAnimateStateChange];
 }
 
 - (void)setColor:(UIColor *)color animated:(BOOL)animated

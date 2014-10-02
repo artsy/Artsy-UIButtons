@@ -15,6 +15,8 @@
 @end
 
 @interface ARButton : UIButton
+@property (nonatomic, readwrite) BOOL shouldDimWhenDisabled;
+@property (nonatomic, readwrite) BOOL shouldAnimateStateChange;
 - (void)setup;
 - (void)setEnabled:(BOOL)enabled animated:(BOOL)animated;
 @end
