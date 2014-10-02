@@ -161,7 +161,7 @@
         self.layer.backgroundColor = [UIColor clearColor].CGColor;
     }
 
-    UIColor *newBackgroundColor = [self.backgroundColors objectForKey:@(self.state)] ?: [self.borderColors objectForKey:UIControlStateNormal];
+    UIColor *newBackgroundColor = [self.backgroundColors objectForKey:@(self.state)] ?: [self.backgroundColors objectForKey:@(UIControlStateNormal)];
     if (newBackgroundColor && newBackgroundColor.CGColor != self.layer.backgroundColor) {
         if (animated) {
             CABasicAnimation *fade = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
@@ -179,7 +179,7 @@
         self.layer.borderColor = [UIColor clearColor].CGColor;
     }
 
-    UIColor *newBorderColor = [self.borderColors objectForKey:@(self.state)] ?: [self.borderColors objectForKey:UIControlStateNormal];
+    UIColor *newBorderColor = [self.borderColors objectForKey:@(self.state)] ?: [self.borderColors objectForKey:@(UIControlStateNormal)];
     if (newBorderColor && newBorderColor.CGColor != self.layer.borderColor) {
         if (animated) {
             CABasicAnimation *fade = [CABasicAnimation animationWithKeyPath:@"borderColor"];
@@ -370,7 +370,7 @@
 - (void)setup
 {
     [super setup];
-    
+
     self.titleLabel.font = [UIFont sansSerifFontWithSize:15];
     self.layer.borderWidth = 0;
 

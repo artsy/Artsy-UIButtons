@@ -20,7 +20,7 @@
 
 // Artsy-UIButtons
 #define COCOAPODS_POD_AVAILABLE_Artsy_UIButtons
-#define COCOAPODS_VERSION_MAJOR_Artsy_UIButtons 0
+#define COCOAPODS_VERSION_MAJOR_Artsy_UIButtons 1
 #define COCOAPODS_VERSION_MINOR_Artsy_UIButtons 1
 #define COCOAPODS_VERSION_PATCH_Artsy_UIButtons 0
 
