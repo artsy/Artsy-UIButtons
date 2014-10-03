@@ -21,7 +21,10 @@
 - (void)setEnabled:(BOOL)enabled animated:(BOOL)animated;
 @end
 
-@interface ARInquireButton : ARButton
+@interface ARUnderlineButton : ARButton
+@end
+
+@interface ARInquireButton : ARUnderlineButton
 @end
 
 @interface ARUppercaseButton : ARButton

@@ -54,7 +54,6 @@
 {
     self.shouldDimWhenDisabled = YES;
     self.shouldAnimateStateChange = YES;
-    NSLog(@"ARButton shouldn't be used as it's an abstract class");
 }
 
 @end
@@ -65,6 +64,37 @@
 {
     title = [title uppercaseString];
     [super setTitle:title forState:state];
+}
+
+@end
+
+@implementation ARUnderlineButton
+
+- (void)setTitle:(NSString *)title forState:(UIControlState)state
+{
+    NSDictionary *underlineAttribute = @{ NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle) };
+    NSAttributedString *attributedTitle = [[NSAttributedString alloc] initWithString:title attributes:underlineAttribute];
+    self.titleLabel.attributedText = attributedTitle;
+    [super setTitle:title forState:state];
+}
+
+@end
+
+@implementation ARInquireButton
+
+- (void)setup
+{
+    [super setup];
+
+    self.titleLabel.font = [UIFont serifFontWithSize:16];
+
+    [self setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
+    [self setTitleColor:[UIColor artsyHeavyGrey] forState:UIControlStateNormal];
+}
+
+- (CGSize)intrinsicContentSize
+{
+    return (CGSize){ UIViewNoIntrinsicMetric, 24 };
 }
 
 @end
@@ -337,33 +367,6 @@
 - (void)setInverseColor:(UIColor *)inverseColor
 {
     [self setTitleColor:inverseColor forState:UIControlStateHighlighted];
-}
-
-@end
-
-@implementation ARInquireButton
-
-- (void)setup
-{
-    [super setup];
-
-    self.titleLabel.font = [UIFont serifFontWithSize:16];
-
-    [self setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
-    [self setTitleColor:[UIColor artsyHeavyGrey] forState:UIControlStateNormal];
-}
-
-- (void)setTitle:(NSString *)title forState:(UIControlState)state
-{
-    NSDictionary *underlineAttribute = @{ NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle) };
-    NSAttributedString *attributedTitle = [[NSAttributedString alloc] initWithString:title attributes:underlineAttribute];
-    self.titleLabel.attributedText = attributedTitle;
-    [super setTitle:title forState:state];
-}
-
-- (CGSize)intrinsicContentSize
-{
-    return (CGSize){ UIViewNoIntrinsicMetric, 24 };
 }
 
 @end
