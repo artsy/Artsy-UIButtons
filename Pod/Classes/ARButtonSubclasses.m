@@ -149,6 +149,7 @@
 
 - (void)setup
 {
+    [super setup];
     self.backgroundColors = [NSMutableDictionary dictionary];
     self.borderColors = [NSMutableDictionary dictionary];
 
