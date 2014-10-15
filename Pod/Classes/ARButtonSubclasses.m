@@ -262,25 +262,29 @@
 
     _backgroundLayer = [CALayer layer];
     _backgroundLayer.masksToBounds = YES;
+    _backgroundLayer.bounds = self.layer.bounds;
 
     [self setBorderColor:[UIColor whiteColor] forState:UIControlStateNormal animated:NO];
     [self setBackgroundColor:[UIColor blackColor] forState:UIControlStateNormal animated:NO];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 
     self.titleLabel.font = [self.titleLabel.font fontWithSize:12];
+    [self.layer insertSublayer:_backgroundLayer atIndex:0];
 
-    [self.layer addSublayer:_backgroundLayer];
 }
 
 - (void)layoutSubviews
 {
+    [super layoutSubviews];
+
     CGFloat borderWidth = self.layer.borderWidth;
     CGFloat width = CGRectGetWidth(self.layer.bounds);
     CGFloat height = CGRectGetHeight(self.layer.bounds);
     CGFloat smallestDimension = MIN(width, height);
     self.layer.cornerRadius = smallestDimension / 2.0;
 
-    self.backgroundLayer.frame = CGRectInset(self.layer.frame, borderWidth, borderWidth);
+    CGRect insetRect = CGRectInset(self.layer.bounds, borderWidth, borderWidth);
+    self.backgroundLayer.frame = insetRect;
     self.backgroundLayer.cornerRadius = self.layer.cornerRadius - borderWidth;
 }
 
