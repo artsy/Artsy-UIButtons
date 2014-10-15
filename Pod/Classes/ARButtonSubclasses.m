@@ -128,8 +128,8 @@
     self.borderColors = [NSMutableDictionary dictionary];
 
     self.titleLabel.font = [UIFont sansSerifFontWithSize:13];
-    self.titleLabel.textAlignment = NSTextAlignmentCenter;
-
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
     CALayer *layer = [self layer];
     [layer setMasksToBounds:YES];
     [layer setCornerRadius:0.0];
@@ -256,8 +256,6 @@
 - (void)setup
 {
     [super setup];
-    self.layer.borderWidth = 1.0;
-    self.layer.masksToBounds = YES;
     self.layer.backgroundColor = [UIColor clearColor].CGColor;
 
     _backgroundLayer = [CALayer layer];
@@ -268,9 +266,7 @@
     [self setBackgroundColor:[UIColor blackColor] forState:UIControlStateNormal animated:NO];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 
-    self.titleLabel.font = [self.titleLabel.font fontWithSize:12];
     [self.layer insertSublayer:_backgroundLayer atIndex:0];
-
 }
 
 - (void)layoutSubviews
