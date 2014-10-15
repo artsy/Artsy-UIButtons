@@ -48,13 +48,6 @@ describe(@"ARUppercaseButton", ^{
     });
 });
 
-describe(@"ARMenuButton", ^{
-    it(@"looks correct", ^{
-        ARMenuButton *button = [[ARMenuButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
-        expect(button).to.haveValidSnapshot();
-    });
-});
-
 describe(@"ARNavigationTabButton", ^{
     ARNavigationTabButton *button = [[ARNavigationTabButton alloc] initWithFrame:CGRectMake(0, 0, 300, 46)];
     itBehavesLike(@"ar button", @{@"button": button});
@@ -103,6 +96,11 @@ sharedExamplesFor(@"flat button", ^(NSDictionary *data) {
         [button setHighlighted:YES animated:NO];;
         expect(button).to.haveValidSnapshot();
     });
+});
+
+describe(@"ARMenuButton", ^{
+    ARMenuButton *button = [[ARMenuButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    itBehavesLike(@"flat button", @{@"button": button});
 });
 
 describe(@"ARClearFlatButton", ^{

@@ -6,9 +6,6 @@
 //  Copyright (c) 2012 Artsy. All rights reserved.
 //
 
-@interface ARMenuButton : UIButton
-@end
-
 @interface ARCircularActionButton : UIButton
 + (CGFloat)buttonSize;
 - (instancetype)initWithImageName:(NSString *)imageName;
@@ -49,6 +46,9 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated;
+@end
+
+@interface ARMenuButton : ARFlatButton
 @end
 
 @interface ARClearFlatButton : ARFlatButton

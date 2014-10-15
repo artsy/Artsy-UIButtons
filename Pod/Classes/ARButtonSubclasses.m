@@ -99,37 +99,11 @@
 
 @end
 
-@implementation ARMenuButton
-
-- (CGSize)intrinsicContentSize
-{
-    return CGSizeMake(40, 40);
-}
-
-- (void)drawRect:(CGRect)rect
-{
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGFloat lineWidth = 1;
-
-    CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
-    CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
-    CGContextSetLineWidth(context, lineWidth);
-
-    CGContextAddEllipseInRect(context, rect);
-    CGContextFillPath(context);
-
-    CGRect borderRect = CGRectInset(rect, lineWidth * 0.5, lineWidth * 0.5);
-    CGContextFillEllipseInRect (context, borderRect);
-    CGContextStrokeEllipseInRect(context, borderRect);
-    CGContextFillPath(context);
-}
-
-@end
-
 @implementation ARModalMenuButton
 
 - (void)setup
 {
+    [super setup];
     self.titleLabel.font = [UIFont sansSerifFontWithSize:12];
 }
 
@@ -189,43 +163,6 @@
     }
 }
 
-- (void)changeColorsForStateChangeAnimated:(BOOL)animated
-{
-    if (!self.layer.backgroundColor) {
-        self.layer.backgroundColor = [UIColor clearColor].CGColor;
-    }
-
-    UIColor *newBackgroundColor = [self.backgroundColors objectForKey:@(self.state)] ?: [self.backgroundColors objectForKey:@(UIControlStateNormal)];
-    if (newBackgroundColor && newBackgroundColor.CGColor != self.layer.backgroundColor) {
-        if (animated) {
-            CABasicAnimation *fade = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
-            fade.fromValue = (__bridge id)(self.layer.backgroundColor);
-            fade.toValue = (__bridge id)(newBackgroundColor.CGColor);
-            fade.duration = ARButtonAnimationDuration;
-            [self.layer addAnimation:fade forKey:@"backgroundFade"];
-        }
-        self.layer.backgroundColor = newBackgroundColor.CGColor;
-    };
-
-    if (self.layer.borderWidth < 1) { return; }
-
-    if (!self.layer.borderColor) {
-        self.layer.borderColor = [UIColor clearColor].CGColor;
-    }
-
-    UIColor *newBorderColor = [self.borderColors objectForKey:@(self.state)] ?: [self.borderColors objectForKey:@(UIControlStateNormal)];
-    if (newBorderColor && newBorderColor.CGColor != self.layer.borderColor) {
-        if (animated) {
-            CABasicAnimation *fade = [CABasicAnimation animationWithKeyPath:@"borderColor"];
-            fade.fromValue = (__bridge id)(self.layer.borderColor);
-            fade.toValue = (__bridge id)(newBorderColor.CGColor);
-            fade.duration = ARButtonAnimationDuration;
-            [self.layer addAnimation:fade forKey:@"borderFade"];
-        }
-        self.layer.borderColor = newBorderColor.CGColor;
-    };
-}
-
 - (void)setSelected:(BOOL)selected
 {
     [self setSelected:selected animated:self.shouldAnimateStateChange];
@@ -252,6 +189,103 @@
 {
     [super setEnabled:enabled animated:animated];
     [self changeColorsForStateChangeAnimated:animated];
+}
+
+- (void)changeColorsForStateChangeAnimated:(BOOL)animated
+{
+    [self changeBackgroundColorForStateChangeAnimated:animated];
+    [self changeBorderColorForStateChangeAnimated:animated];
+}
+
+- (void)changeBackgroundColorForStateChangeAnimated:(BOOL)animated{
+    [self changeBackgroundColorForStateChangeAnimated:animated layer:self.layer];
+}
+
+- (void)changeBorderColorForStateChangeAnimated:(BOOL)animated{
+    [self changeBorderColorForStateChangeAnimated:animated layer:self.layer];
+}
+
+- (void)changeBackgroundColorForStateChangeAnimated:(BOOL)animated layer:(CALayer *)layer
+{
+    if (!layer.backgroundColor) {
+        layer.backgroundColor = [UIColor clearColor].CGColor;
+    }
+
+    UIColor *newBackgroundColor = [self.backgroundColors objectForKey:@(self.state)] ?: [self.backgroundColors objectForKey:@(UIControlStateNormal)];
+    if (newBackgroundColor && newBackgroundColor.CGColor != layer.backgroundColor) {
+        if (animated) {
+            [self animateLayer:layer fromColor:layer.backgroundColor toColor:newBackgroundColor.CGColor forKey:@"backgroundColor"];
+        }
+        layer.backgroundColor = newBackgroundColor.CGColor;
+    };
+}
+
+- (void)changeBorderColorForStateChangeAnimated:(BOOL)animated  layer:(CALayer *)layer
+{
+    if (!layer.borderColor) {
+        layer.borderColor = [UIColor clearColor].CGColor;
+    }
+
+    UIColor *newBorderColor = [self.borderColors objectForKey:@(self.state)] ?: [self.borderColors objectForKey:@(UIControlStateNormal)];
+    if (newBorderColor && newBorderColor.CGColor != layer.borderColor) {
+        if (animated) {
+            [self animateLayer:layer fromColor:layer.borderColor toColor:newBorderColor.CGColor forKey:@"borderColor"];
+
+        }
+        layer.borderColor = newBorderColor.CGColor;
+    };
+}
+
+- (void)animateLayer:(CALayer *)layer fromColor:(CGColorRef)fromColor toColor:(CGColorRef)toColor forKey:(NSString *)key
+{
+    CABasicAnimation *fade = [CABasicAnimation animation];
+    fade.fromValue = (__bridge id)(fromColor);
+    fade.toValue = (__bridge id)(toColor);
+    fade.duration = ARButtonAnimationDuration;
+    [layer addAnimation:fade forKey:key];
+}
+
+@end
+
+@interface ARMenuButton()
+@property(nonatomic, strong, readonly) CALayer *backgroundLayer;
+@end
+
+@implementation ARMenuButton
+
+- (void)setup
+{
+    [super setup];
+    self.layer.borderWidth = 1.0;
+    self.layer.masksToBounds = YES;
+    self.layer.backgroundColor = [UIColor clearColor].CGColor;
+
+    _backgroundLayer = [CALayer layer];
+    _backgroundLayer.masksToBounds = YES;
+
+    [self setBorderColor:[UIColor whiteColor] forState:UIControlStateNormal animated:NO];
+    [self setBackgroundColor:[UIColor blackColor] forState:UIControlStateNormal animated:NO];
+    [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
+    self.titleLabel.font = [self.titleLabel.font fontWithSize:12];
+
+    [self.layer addSublayer:_backgroundLayer];
+}
+
+- (void)layoutSubviews
+{
+    CGFloat borderWidth = self.layer.borderWidth;
+    CGFloat width = CGRectGetWidth(self.layer.bounds);
+    CGFloat height = CGRectGetHeight(self.layer.bounds);
+    CGFloat smallestDimension = MIN(width, height);
+    self.layer.cornerRadius = smallestDimension / 2.0;
+
+    self.backgroundLayer.frame = CGRectInset(self.layer.frame, borderWidth, borderWidth);
+    self.backgroundLayer.cornerRadius = self.layer.cornerRadius - borderWidth;
+}
+
+- (void)changeBackgroundColorForStateChangeAnimated:(BOOL)animated{
+    [self changeBackgroundColorForStateChangeAnimated:animated layer:self.backgroundLayer];
 }
 
 @end
