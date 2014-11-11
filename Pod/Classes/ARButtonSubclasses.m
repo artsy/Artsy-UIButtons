@@ -366,6 +366,11 @@
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
 
+- (void)setSelected:(BOOL)selected
+{
+    [self setSelected:selected animated:self.shouldAnimateStateChange];
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected];
