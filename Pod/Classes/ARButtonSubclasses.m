@@ -282,10 +282,19 @@
     CGRect insetRect = CGRectInset(self.layer.bounds, borderWidth, borderWidth);
     self.backgroundLayer.frame = insetRect;
     self.backgroundLayer.cornerRadius = self.layer.cornerRadius - borderWidth;
+
+    [self bringSubviewToFront:self.imageView];
+    [self bringSubviewToFront:self.titleLabel];
 }
 
 - (void)changeBackgroundColorForStateChangeAnimated:(BOOL)animated{
     [self changeBackgroundColorForStateChangeAnimated:animated layer:self.backgroundLayer];
+}
+
+
+- (CGSize)intrinsicContentSize
+{
+    return (CGSize){ 40, 40 };
 }
 
 @end
