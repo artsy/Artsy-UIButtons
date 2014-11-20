@@ -314,6 +314,11 @@
 
 }
 
+- (CGSize)intrinsicContentSize
+{
+    return (CGSize){ 280, 44 };
+}
+
 @end
 
 
@@ -330,6 +335,11 @@
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
 
     self.layer.borderWidth = 0;
+}
+
+- (CGSize)intrinsicContentSize
+{
+    return (CGSize){ 280, 44 };
 }
 
 @end
@@ -437,7 +447,7 @@
 
 - (CGSize)intrinsicContentSize
 {
-    return (CGSize){ UIViewNoIntrinsicMetric, 46 };
+    return (CGSize){ 280, 46 };
 }
 
 @end
