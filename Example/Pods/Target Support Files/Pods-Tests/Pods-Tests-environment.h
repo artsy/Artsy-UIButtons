@@ -21,7 +21,7 @@
 // Artsy-UIButtons
 #define COCOAPODS_POD_AVAILABLE_Artsy_UIButtons
 #define COCOAPODS_VERSION_MAJOR_Artsy_UIButtons 1
-#define COCOAPODS_VERSION_MINOR_Artsy_UIButtons 1
+#define COCOAPODS_VERSION_MINOR_Artsy_UIButtons 3
 #define COCOAPODS_VERSION_PATCH_Artsy_UIButtons 0
 
 // EDColor
@@ -53,4 +53,10 @@
 #define COCOAPODS_VERSION_MAJOR_Specta 0
 #define COCOAPODS_VERSION_MINOR_Specta 2
 #define COCOAPODS_VERSION_PATCH_Specta 1
+
+// UIView+BooleanAnimations
+#define COCOAPODS_POD_AVAILABLE_UIView_BooleanAnimations
+#define COCOAPODS_VERSION_MAJOR_UIView_BooleanAnimations 1
+#define COCOAPODS_VERSION_MINOR_UIView_BooleanAnimations 0
+#define COCOAPODS_VERSION_PATCH_UIView_BooleanAnimations 2
 
