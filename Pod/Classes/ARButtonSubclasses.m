@@ -8,7 +8,7 @@
 
 #import "ARButtonSubclasses.h"
 #import <Artsy+UIColors/UIColor+ArtsyColors.h>
-#import "UIView+BooleanDependentAnimation.h"
+#import <UIView+BooleanAnimations/UIView+BooleanAnimations.h>
 
 #if __has_include(<Artsy+UIFonts/UIFont+ArtsyFonts.h>)
 #import <Artsy+UIFonts/UIFont+ArtsyFonts.h>
@@ -17,6 +17,8 @@
 #if __has_include(<Artsy+OSSUIFonts/UIFont+OSSArtsyFonts.h>)
 #import <Artsy+OSSUIFonts/UIFont+OSSArtsyFonts.h>
 #endif
+
+const CGFloat ARButtonAnimationDuration = 0.15;
 
 @implementation ARButton
 
@@ -45,7 +47,7 @@
     [super setEnabled:enabled];
     if (!self.shouldDimWhenDisabled) { return; }
     CGFloat alpha = enabled ? 1 : 0.5;
-    [UIView animateIf:animated withDuration:ARButtonAnimationDuration :^{
+    [UIView animateIf:animated duration:ARButtonAnimationDuration :^{
         self.alpha = alpha;
     }];
 }
@@ -393,7 +395,7 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected];
-    [UIView animateIf:animated withDuration:ARButtonAnimationDuration :^{
+    [UIView animateIf:animated duration:ARButtonAnimationDuration :^{
         self.alpha = selected ? 1 : 0.5;
     }];
 }

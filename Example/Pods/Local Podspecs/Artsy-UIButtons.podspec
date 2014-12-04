@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Artsy-UIButtons"
-  s.version          = "1.1.0"
+  s.version          = "1.3.0"
   s.summary          = "Artsy's UIButton subclasses."
   s.homepage         = "https://github.com/artsy/Artsy-UIButtons"
   s.license          = 'MIT'
@@ -21,8 +21,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes'
-  s.resources = 'Pod/Assets/*'
 
   s.frameworks = 'UIKit'
-  s.dependencies = ['Artsy+UIColors']
+  s.dependencies = ['Artsy+UIColors', 'UIView+BooleanAnimations']
 end
