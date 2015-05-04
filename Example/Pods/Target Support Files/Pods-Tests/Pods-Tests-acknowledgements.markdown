@@ -59,7 +59,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Expecta
 
-Copyright (c) 2011-2012 Specta Team - https://github.com/specta
+Copyright (c) 2011-2015 Specta Team - https://github.com/specta
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -141,7 +141,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ## Specta
 
-Copyright (c) 2012-2013 Specta Team.
+Copyright (c) 2012-2014 Specta Team.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
