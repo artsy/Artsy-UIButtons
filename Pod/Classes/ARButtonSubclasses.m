@@ -74,6 +74,12 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 - (void)setUnderlinedTitle:(NSString *)title underlineRange:(NSRange)range forState:(UIControlState)state
 {
     NSMutableAttributedString *attributedTitle = [[NSMutableAttributedString alloc] initWithString:title];
+    // Work around a bug in iOS 8.0 - 8.2 where partial underlines only work if the style is set starting from 0.
+    if (range.location > 0) {
+        [attributedTitle addAttribute:NSUnderlineStyleAttributeName
+                                value:@(NSUnderlineStyleNone)
+                                range:NSMakeRange(0, range.location - 1)];
+    }
     [attributedTitle addAttribute:NSUnderlineStyleAttributeName value:@(NSUnderlineStyleSingle) range:range];
     [self setAttributedTitle:attributedTitle forState:state];
 }
