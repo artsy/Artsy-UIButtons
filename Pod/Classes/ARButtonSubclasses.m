@@ -64,12 +64,23 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 
 @implementation ARUnderlineButton
 
+// Without this override, the text would not get colored appropriately.
+- (void)setAttributedTitle:(NSAttributedString *)title forState:(UIControlState)state
+{
+    self.titleLabel.attributedText = title;
+    [super setTitle:title.string forState:state];
+}
+
+- (void)setUnderlinedTitle:(NSString *)title underlineRange:(NSRange)range forState:(UIControlState)state
+{
+    NSMutableAttributedString *attributedTitle = [[NSMutableAttributedString alloc] initWithString:title];
+    [attributedTitle addAttribute:NSUnderlineStyleAttributeName value:@(NSUnderlineStyleSingle) range:range];
+    [self setAttributedTitle:attributedTitle forState:state];
+}
+
 - (void)setTitle:(NSString *)title forState:(UIControlState)state
 {
-    NSDictionary *underlineAttribute = @{ NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle) };
-    NSAttributedString *attributedTitle = [[NSAttributedString alloc] initWithString:title attributes:underlineAttribute];
-    self.titleLabel.attributedText = attributedTitle;
-    [super setTitle:title forState:state];
+    [self setUnderlinedTitle:title underlineRange:NSMakeRange(0, title.length) forState:state];
 }
 
 @end

@@ -57,8 +57,22 @@ describe(@"ARModalMenuButton", ^{
 });
 
 describe(@"ARUnderlineButton", ^{
-    ARUnderlineButton *button = [[ARUnderlineButton alloc] initWithFrame:CGRectMake(0, 0, 300, 24)];
-    itBehavesLike(@"ar button", @{@"button": button});
+    {
+        ARUnderlineButton *button = [[ARUnderlineButton alloc] initWithFrame:CGRectMake(0, 0, 300, 24)];
+        itBehavesLike(@"ar button", @{@"button": button});
+    }
+
+    it(@"partially underlines from the start", ^{
+        ARUnderlineButton *button = [[ARUnderlineButton alloc] initWithFrame:CGRectMake(0, 0, 300, 24)];
+        [button setUnderlinedTitle:@"Partial Underline" underlineRange:NSMakeRange(0, 7) forState:UIControlStateNormal];
+        expect(button).to.haveValidSnapshot();
+    });
+    
+    it(@"partially underlines further in the title", ^{
+        ARUnderlineButton *button = [[ARUnderlineButton alloc] initWithFrame:CGRectMake(0, 0, 300, 24)];
+        [button setUnderlinedTitle:@"Partial Underline" underlineRange:NSMakeRange(8, 9) forState:UIControlStateNormal];
+        expect(button).to.haveValidSnapshot();
+    });
 });
 
 describe(@"ARInquireButton", ^{

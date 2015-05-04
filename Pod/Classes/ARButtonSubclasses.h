@@ -11,6 +11,7 @@
 @end
 
 @interface ARUnderlineButton : ARButton
+- (void)setUnderlinedTitle:(NSString *)title underlineRange:(NSRange)range forState:(UIControlState)state;
 @end
 
 @interface ARInquireButton : ARUnderlineButton
