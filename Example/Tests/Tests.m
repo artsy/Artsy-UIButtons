@@ -1,11 +1,3 @@
-//
-//  ARButtonSubclassTests.m
-//  ARButtonSubclassTests.m
-//
-//  Created by Laura Brown on 9/23/14.
-//  Copyright (c) 2014 Laura Brown. All rights reserved.
-//
-
 #import <Artsy-UIButtons/ARButtonSubclasses.h>
 
 SpecBegin(ARButtonSubclasses)

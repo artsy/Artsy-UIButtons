@@ -1,11 +1,3 @@
-//
-//  ARButtonSubclasses.m
-//  Artsy
-//
-//  Created by Orta Therox on 18/11/2012.
-//  Copyright (c) 2012 Artsy. All rights reserved.
-//
-
 #import "ARButtonSubclasses.h"
 #import <Artsy+UIColors/UIColor+ArtsyColors.h>
 #import <UIView+BooleanAnimations/UIView+BooleanAnimations.h>
