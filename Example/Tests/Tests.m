@@ -56,6 +56,11 @@ describe(@"ARModalMenuButton", ^{
     itBehavesLike(@"ar button", @{@"button": button});
 });
 
+describe(@"ARUnderlineButton", ^{
+    ARUnderlineButton *button = [[ARUnderlineButton alloc] initWithFrame:CGRectMake(0, 0, 300, 24)];
+    itBehavesLike(@"ar button", @{@"button": button});
+});
+
 describe(@"ARInquireButton", ^{
     ARInquireButton *button = [[ARInquireButton alloc] initWithFrame:CGRectMake(0, 0, 300, 24)];
     itBehavesLike(@"ar button", @{@"button": button});
