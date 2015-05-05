@@ -2,7 +2,7 @@ PODS:
   - Artsy+OSSUIFonts (1.1.0)
   - Artsy+UIColors (1.0.0):
     - EDColor (~> 0.4)
-  - Artsy-UIButtons (1.3.0):
+  - Artsy-UIButtons (1.4.0):
     - Artsy+UIColors
     - UIView+BooleanAnimations
   - EDColor (0.4.0)
@@ -11,7 +11,7 @@ PODS:
     - Expecta (~> 0.3)
     - FBSnapshotTestCase (= 1.6)
   - FBSnapshotTestCase (1.6)
-  - Specta (0.5.0)
+  - Specta (1.0.0)
   - UIView+BooleanAnimations (1.0.2)
 
 DEPENDENCIES:
@@ -29,12 +29,12 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Artsy+OSSUIFonts: e538d656b33ee7b1c66a97f57923f37ce565b3a8
   Artsy+UIColors: d1d5e084a0e542d310c507acb5446bae6a322241
-  Artsy-UIButtons: 40deec91c83ec1d13bd9b18223ca3d0d7f75b284
+  Artsy-UIButtons: f4ded7c21e96fb1a36fbc1ee4b8e3e99aba16d61
   EDColor: 89d19a013279a5604d61650721c15f20fefaaf00
   Expecta: 78b4e8b0c8291fa4524d7f74016b6065c2e391ec
   Expecta+Snapshots: 40c5ec43b43da3bae957f14fed5dc9177d08ec8b
   FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
-  Specta: eb90708ed77569bbda089f8ead10bb99b8e9489e
+  Specta: 96fe05fe5c7348b5223f85e862904f6e832abb14
   UIView+BooleanAnimations: a760be9a066036e55f298b7b7350a6cb14cfcd97
 
 COCOAPODS: 0.37.0
