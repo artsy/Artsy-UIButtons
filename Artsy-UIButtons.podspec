@@ -14,5 +14,6 @@ Pod::Spec.new do |s|
   s.source_files = 'Pod/Classes'
 
   s.frameworks = 'UIKit'
-  s.dependencies = ['Artsy+UIColors', 'UIView+BooleanAnimations']
+  s.dependency 'Artsy+UIColors'
+  s.dependency 'UIView+BooleanAnimations'
 end
