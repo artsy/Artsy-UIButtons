@@ -1,11 +1,3 @@
-//
-//  ARButtonSubclassTests.m
-//  ARButtonSubclassTests.m
-//
-//  Created by Laura Brown on 9/23/14.
-//  Copyright (c) 2014 Laura Brown. All rights reserved.
-//
-
 #import <Artsy-UIButtons/ARButtonSubclasses.h>
 
 SpecBegin(ARButtonSubclasses)
@@ -62,6 +54,25 @@ describe(@"ARModalMenuButton", ^{
     ARModalMenuButton *button = [[ARModalMenuButton alloc] initWithFrame:CGRectMake(0, 0, 300, 46)];
     [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     itBehavesLike(@"ar button", @{@"button": button});
+});
+
+describe(@"ARUnderlineButton", ^{
+    {
+        ARUnderlineButton *button = [[ARUnderlineButton alloc] initWithFrame:CGRectMake(0, 0, 300, 24)];
+        itBehavesLike(@"ar button", @{@"button": button});
+    }
+
+    it(@"partially underlines from the start", ^{
+        ARUnderlineButton *button = [[ARUnderlineButton alloc] initWithFrame:CGRectMake(0, 0, 300, 24)];
+        [button setUnderlinedTitle:@"Partial Underline" underlineRange:NSMakeRange(0, 7) forState:UIControlStateNormal];
+        expect(button).to.haveValidSnapshot();
+    });
+    
+    it(@"partially underlines further in the title", ^{
+        ARUnderlineButton *button = [[ARUnderlineButton alloc] initWithFrame:CGRectMake(0, 0, 300, 24)];
+        [button setUnderlinedTitle:@"Partial Underline" underlineRange:NSMakeRange(8, 9) forState:UIControlStateNormal];
+        expect(button).to.haveValidSnapshot();
+    });
 });
 
 describe(@"ARInquireButton", ^{
