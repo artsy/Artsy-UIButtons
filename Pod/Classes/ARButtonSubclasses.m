@@ -9,11 +9,11 @@
 #endif
 
 #if __has_include(<UIView+BooleanAnimations/UIView+BooleanAnimations.h>)
-#import <UIView+BooleanAnimations/UIColor+ArtsyColors.h>
+#import <UIView+BooleanAnimations/UIView+BooleanAnimations.h>
 #endif
 
 #if __has_include(<UIView_BooleanAnimations/UIView+BooleanAnimations.h>)
-#import <UIView_BooleanAnimations/UIColor+ArtsyColors.h>
+#import <UIView_BooleanAnimations/UIView+BooleanAnimations.h>
 #endif
 
 #if __has_include(<Artsy+UIFonts/UIFont+ArtsyFonts.h>)
