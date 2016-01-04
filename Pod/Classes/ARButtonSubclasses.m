@@ -1,13 +1,35 @@
 #import "ARButtonSubclasses.h"
+
+#if __has_include(<Artsy+UIColors/UIColor+ArtsyColors.h>)
 #import <Artsy+UIColors/UIColor+ArtsyColors.h>
-#import <UIView+BooleanAnimations/UIView+BooleanAnimations.h>
+#endif
+
+#if __has_include(<Artsy_UIColors/UIColor+ArtsyColors.h>)
+#import <Artsy_UIColors/UIColor+ArtsyColors.h>
+#endif
+
+#if __has_include(<UIView+BooleanAnimations/UIView+BooleanAnimations.h>)
+#import <UIView+BooleanAnimations/UIColor+ArtsyColors.h>
+#endif
+
+#if __has_include(<UIView_BooleanAnimations/UIView+BooleanAnimations.h>)
+#import <UIView_BooleanAnimations/UIColor+ArtsyColors.h>
+#endif
 
 #if __has_include(<Artsy+UIFonts/UIFont+ArtsyFonts.h>)
 #import <Artsy+UIFonts/UIFont+ArtsyFonts.h>
 #endif
 
+#if __has_include(<Artsy_UIFonts/UIFont+ArtsyFonts.h>)
+#import <Artsy_UIFonts/UIFont+ArtsyFonts.h>
+#endif
+
 #if __has_include(<Artsy+OSSUIFonts/UIFont+OSSArtsyFonts.h>)
 #import <Artsy+OSSUIFonts/UIFont+OSSArtsyFonts.h>
+#endif
+
+#if __has_include(<Artsy_OSSUIFonts/UIFont+OSSArtsyFonts.h>)
+#import <Artsy_OSSUIFonts/UIFont+OSSArtsyFonts.h>
 #endif
 
 const CGFloat ARButtonAnimationDuration = 0.15;
