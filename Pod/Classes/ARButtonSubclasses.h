@@ -1,3 +1,5 @@
+#import <UIKit/UIKit.h>
+
 @interface ARCircularActionButton : UIButton
 + (CGFloat)buttonSize;
 - (instancetype)initWithImageName:(NSString *)imageName;
