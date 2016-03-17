@@ -3,7 +3,7 @@ PODS:
   - Artsy+UIFonts (2.0.0)
   - Artsy-UIButtons (2.0.0):
     - Artsy+UIColors (~> 3.0)
-    - Artsy+UIFonts (~> 2.0)
+    - Artsy+UIFonts
     - UIView+BooleanAnimations
   - Expecta (1.0.5)
   - Expecta+Snapshots (2.0.0):
@@ -46,7 +46,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Artsy+UIColors: 4bcad6457b985ebbf84b3c96a5cd58c48d937778
   Artsy+UIFonts: b1c53a1f9998bfce96ef1b544191f846e7ed1b0e
-  Artsy-UIButtons: 1a3f8b0013e81bcabd43e2c0964aa94e66c617f9
+  Artsy-UIButtons: ff6ab144bb42f978dbe75664d80541d3ed345908
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   Expecta+Snapshots: 29b38dd695bc72a0ed2bea833937d78df41943ba
   FBSnapshotTestCase: a89bbc6ea786ef38c2d4e313b3374177c8597b8f
