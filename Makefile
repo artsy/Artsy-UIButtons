@@ -1,5 +1,5 @@
 WORKSPACE = Example/Artsy-UIButtons.xcworkspace
-SCHEME = Artsy-UIButtons
+SCHEME = Artsy-UIButtons-Tests
 
 all: ci
 
