@@ -24,14 +24,6 @@
 #import <Artsy_UIFonts/UIFont+ArtsyFonts.h>
 #endif
 
-#if __has_include(<Artsy+OSSUIFonts/UIFont+OSSArtsyFonts.h>)
-#import <Artsy+OSSUIFonts/UIFont+OSSArtsyFonts.h>
-#endif
-
-#if __has_include(<Artsy_OSSUIFonts/UIFont+OSSArtsyFonts.h>)
-#import <Artsy_OSSUIFonts/UIFont+OSSArtsyFonts.h>
-#endif
-
 const CGFloat ARButtonAnimationDuration = 0.15;
 
 @implementation ARButton
@@ -122,7 +114,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
     self.titleLabel.font = [UIFont serifFontWithSize:16];
 
     [self setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
-    [self setTitleColor:[UIColor artsyHeavyGrey] forState:UIControlStateNormal];
+    [self setTitleColor:[UIColor artsyGrayBold] forState:UIControlStateNormal];
 }
 
 - (CGSize)intrinsicContentSize
@@ -342,8 +334,8 @@ const CGFloat ARButtonAnimationDuration = 0.15;
     [self setBorderColor:[UIColor whiteColor] forState:UIControlStateNormal animated:NO];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 
-    [self setBackgroundColor:[UIColor artsyPurple] forState:UIControlStateHighlighted animated:NO];
-    [self setBorderColor:[UIColor artsyPurple] forState:UIControlStateHighlighted animated:NO];
+    [self setBackgroundColor:[UIColor artsyPurpleRegular] forState:UIControlStateHighlighted animated:NO];
+    [self setBorderColor:[UIColor artsyPurpleRegular] forState:UIControlStateHighlighted animated:NO];
 
 }
 
@@ -399,7 +391,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
     }
 
     CALayer *buttonLayer = self.layer;
-    buttonLayer.borderColor = [UIColor artsyLightGrey].CGColor;
+    buttonLayer.borderColor = [UIColor artsyGrayLight].CGColor;
     buttonLayer.borderWidth = 1;
     buttonLayer.cornerRadius = [self.class buttonSize] * .5f;
 
@@ -475,7 +467,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 
     [self setBackgroundColor:[UIColor blackColor] forState:UIControlStateNormal animated:NO];
-    [self setBackgroundColor:[UIColor artsyPurple] forState:UIControlStateHighlighted animated:NO];
+    [self setBackgroundColor:[UIColor artsyPurpleRegular] forState:UIControlStateHighlighted animated:NO];
 }
 
 - (CGSize)intrinsicContentSize

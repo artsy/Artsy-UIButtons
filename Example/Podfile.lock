@@ -1,40 +1,58 @@
 PODS:
-  - Artsy+OSSUIFonts (1.1.0)
-  - Artsy+UIColors (1.0.0):
-    - EDColor (~> 0.4)
+  - Artsy+UIColors (3.0.0)
+  - Artsy+UIFonts (2.0.0)
   - Artsy-UIButtons (1.4.0):
-    - Artsy+UIColors
+    - Artsy+UIColors (~> 3.0)
+    - Artsy+UIFonts (~> 2.0)
     - UIView+BooleanAnimations
-  - EDColor (0.4.0)
-  - Expecta (0.4.2)
-  - Expecta+Snapshots (1.3.2):
-    - Expecta (~> 0.3)
-    - FBSnapshotTestCase (= 1.6)
-  - FBSnapshotTestCase (1.6)
-  - Specta (1.0.0)
+  - Expecta (1.0.5)
+  - Expecta+Snapshots (2.0.0):
+    - Expecta (~> 1.0)
+    - FBSnapshotTestCase/Core (~> 2.0.3)
+  - FBSnapshotTestCase (2.0.7):
+    - FBSnapshotTestCase/SwiftSupport (= 2.0.7)
+  - FBSnapshotTestCase/Core (2.0.7)
+  - FBSnapshotTestCase/SwiftSupport (2.0.7):
+    - FBSnapshotTestCase/Core
+  - Specta (1.0.5)
   - UIView+BooleanAnimations (1.0.2)
 
 DEPENDENCIES:
-  - Artsy+OSSUIFonts
+  - Artsy+UIFonts (from `https://github.com/artsy/Artsy-OSSUIFonts.git`, branch `v2`)
   - Artsy-UIButtons (from `../`)
   - Expecta
   - Expecta+Snapshots
-  - FBSnapshotTestCase
+  - FBSnapshotTestCase (from `https://github.com/neonichu/ios-snapshot-test-case.git`, commit `9e88da88a7a3df2f80838449a5f1e71830179218`)
   - Specta
 
 EXTERNAL SOURCES:
+  Artsy+UIFonts:
+    :branch: v2
+    :git: https://github.com/artsy/Artsy-OSSUIFonts.git
   Artsy-UIButtons:
-    :path: ../
+    :path: "../"
+  FBSnapshotTestCase:
+    :commit: 9e88da88a7a3df2f80838449a5f1e71830179218
+    :git: https://github.com/neonichu/ios-snapshot-test-case.git
+
+CHECKOUT OPTIONS:
+  Artsy+UIFonts:
+    :commit: e02ecc4d44107864ce8688bae9ea0d151486c3ae
+    :git: https://github.com/artsy/Artsy-OSSUIFonts.git
+  FBSnapshotTestCase:
+    :commit: 9e88da88a7a3df2f80838449a5f1e71830179218
+    :git: https://github.com/neonichu/ios-snapshot-test-case.git
 
 SPEC CHECKSUMS:
-  Artsy+OSSUIFonts: e538d656b33ee7b1c66a97f57923f37ce565b3a8
-  Artsy+UIColors: d1d5e084a0e542d310c507acb5446bae6a322241
-  Artsy-UIButtons: f4ded7c21e96fb1a36fbc1ee4b8e3e99aba16d61
-  EDColor: 89d19a013279a5604d61650721c15f20fefaaf00
-  Expecta: 78b4e8b0c8291fa4524d7f74016b6065c2e391ec
-  Expecta+Snapshots: 40c5ec43b43da3bae957f14fed5dc9177d08ec8b
-  FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
-  Specta: 96fe05fe5c7348b5223f85e862904f6e832abb14
+  Artsy+UIColors: 4bcad6457b985ebbf84b3c96a5cd58c48d937778
+  Artsy+UIFonts: b1c53a1f9998bfce96ef1b544191f846e7ed1b0e
+  Artsy-UIButtons: 57e8b9d6968eb710a0dfec130e98b09d423d646b
+  Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
+  Expecta+Snapshots: 29b38dd695bc72a0ed2bea833937d78df41943ba
+  FBSnapshotTestCase: a89bbc6ea786ef38c2d4e313b3374177c8597b8f
+  Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
   UIView+BooleanAnimations: a760be9a066036e55f298b7b7350a6cb14cfcd97
 
-COCOAPODS: 0.37.0
+PODFILE CHECKSUM: 2500b1fe4e23e7b7968c4df9f7faac04906e284e
+
+COCOAPODS: 1.0.0.beta.3
