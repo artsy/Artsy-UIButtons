@@ -1,6 +1,7 @@
 # reference: http://www.objc.io/issue-6/travis-ci.html
 
 language: objective-c
+osx_image: xcode7
 
 env:
     global:

@@ -1,17 +1,19 @@
+use_frameworks!
+platform :ios, '8.0'
+
 source 'https://github.com/artsy/Specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'Artsy-UIButtons' do
-    pod 'Artsy+OSSUIFonts'
-    pod "Artsy-UIButtons", :path => "../"
-end
-
-target 'Tests', :exclusive => true do
-    pod 'Artsy+OSSUIFonts'
+    pod 'Artsy+UIFonts', :git => "https://github.com/artsy/Artsy-OSSUIFonts.git", :branch => "v2"
     pod "Artsy-UIButtons", :path => "../"
 
-    pod 'Specta'
-    pod 'Expecta'
-    pod 'FBSnapshotTestCase'
-    pod 'Expecta+Snapshots'
+    target 'Tests' do
+      inherit! :search_paths
+        pod 'Specta'
+        pod 'Expecta'
+        pod 'FBSnapshotTestCase', git: 'https://github.com/neonichu/ios-snapshot-test-case.git', commit: '9e88da88a7a3df2f80838449a5f1e71830179218'
+        pod 'Expecta+Snapshots'
+    end
 end
+
