@@ -391,7 +391,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
     }
 
     CALayer *buttonLayer = self.layer;
-    buttonLayer.borderColor = [UIColor artsyGrayLight].CGColor;
+    buttonLayer.borderColor = [UIColor artsyGrayRegular].CGColor;
     buttonLayer.borderWidth = 1;
     buttonLayer.cornerRadius = [self.class buttonSize] * .5f;
 
