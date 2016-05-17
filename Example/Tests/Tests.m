@@ -1,3 +1,8 @@
+@import Specta;
+@import Expecta;
+@import FBSnapshotTestCase;
+
+@import Expecta_Snapshots;
 @import Artsy_UIButtons;
 
 SpecBegin(ARButtonSubclasses)
@@ -111,6 +116,11 @@ sharedExamplesFor(@"flat button", ^(NSDictionary *data) {
 
 describe(@"ARMenuButton", ^{
     ARMenuButton *button = [[ARMenuButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    itBehavesLike(@"flat button", @{@"button": button});
+});
+
+describe(@"ARLightMenuButton", ^{
+    ARLightMenuButton *button = [[ARLightMenuButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
     itBehavesLike(@"flat button", @{@"button": button});
 });
 

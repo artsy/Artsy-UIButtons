@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32F413E1097CB43F1B5AFFE0 /* Pods_Artsy_UIButtons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59A1FA50D1EFE89325A0C51 /* Pods_Artsy_UIButtons.framework */; };
+		29CC5687A1C86CA83A047D26 /* Pods_Artsy_UIButtons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4508E85347113182D611B77 /* Pods_Artsy_UIButtons.framework */; };
+		3D312628B4C7FEDD28163DF7 /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 974BAE706DC2E2A5840C1662 /* Pods_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -23,7 +24,6 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		93F979036B484BE82BCFC8A5 /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4C2AFC179FECC465FAA805 /* Pods_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A3A53B24607E174883D5DBF /* Pods-Artsy-UIButtons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artsy-UIButtons.release.xcconfig"; path = "Pods/Target Support Files/Pods-Artsy-UIButtons/Pods-Artsy-UIButtons.release.xcconfig"; sourceTree = "<group>"; };
-		3344C7E227E2A8E8B5087291 /* Pods-Artsy-UIButtons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artsy-UIButtons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Artsy-UIButtons/Pods-Artsy-UIButtons.debug.xcconfig"; sourceTree = "<group>"; };
+		3DF3A45372E0AEAC13136B5A /* Pods-Artsy-UIButtons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artsy-UIButtons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Artsy-UIButtons/Pods-Artsy-UIButtons.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* Artsy-UIButtons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Artsy-UIButtons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,12 +60,13 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6B0580E0680FC66E07688605 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		7F4C2AFC179FECC465FAA805 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BA8EC61D680A4C18972D20E /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		87D787A03C73C6DFC893C281 /* Pods-Artsy-UIButtons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artsy-UIButtons.release.xcconfig"; path = "Pods/Target Support Files/Pods-Artsy-UIButtons/Pods-Artsy-UIButtons.release.xcconfig"; sourceTree = "<group>"; };
+		8AB669E1134AFD0FBFECF067 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		925A1B8CEC6752F6F1A2CADF /* Artsy-UIButtons.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "Artsy-UIButtons.podspec"; path = "../Artsy-UIButtons.podspec"; sourceTree = "<group>"; };
-		ABA984F561A12505FE120C91 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		974BAE706DC2E2A5840C1662 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4508E85347113182D611B77 /* Pods_Artsy_UIButtons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artsy_UIButtons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCAC6A9876DE9B392A896361 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		E59A1FA50D1EFE89325A0C51 /* Pods_Artsy_UIButtons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artsy_UIButtons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEA4090DF2A595FBEE435A33 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				32F413E1097CB43F1B5AFFE0 /* Pods_Artsy_UIButtons.framework in Frameworks */,
+				29CC5687A1C86CA83A047D26 /* Pods_Artsy_UIButtons.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				93F979036B484BE82BCFC8A5 /* Pods_Tests.framework in Frameworks */,
+				3D312628B4C7FEDD28163DF7 /* Pods_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +103,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				CF8A28F73276EB22D9CA626B /* Pods */,
+				724E0E76C0B010DB8D63435A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,8 +123,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				E59A1FA50D1EFE89325A0C51 /* Pods_Artsy_UIButtons.framework */,
-				7F4C2AFC179FECC465FAA805 /* Pods_Tests.framework */,
+				B4508E85347113182D611B77 /* Pods_Artsy_UIButtons.framework */,
+				974BAE706DC2E2A5840C1662 /* Pods_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -184,13 +184,13 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		CF8A28F73276EB22D9CA626B /* Pods */ = {
+		724E0E76C0B010DB8D63435A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3344C7E227E2A8E8B5087291 /* Pods-Artsy-UIButtons.debug.xcconfig */,
-				0A3A53B24607E174883D5DBF /* Pods-Artsy-UIButtons.release.xcconfig */,
-				ABA984F561A12505FE120C91 /* Pods-Tests.debug.xcconfig */,
-				8BA8EC61D680A4C18972D20E /* Pods-Tests.release.xcconfig */,
+				3DF3A45372E0AEAC13136B5A /* Pods-Artsy-UIButtons.debug.xcconfig */,
+				87D787A03C73C6DFC893C281 /* Pods-Artsy-UIButtons.release.xcconfig */,
+				FEA4090DF2A595FBEE435A33 /* Pods-Tests.debug.xcconfig */,
+				8AB669E1134AFD0FBFECF067 /* Pods-Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -202,15 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "Artsy-UIButtons" */;
 			buildPhases = (
-				849BD16B4529CDB82A32F890 /* Check Pods Manifest.lock */,
-				4AD4AD34879DFA6FD1F39B23 /* 📦 Check Pods Manifest.lock */,
+				929B9510BA02937909C8B2F7 /* 📦 Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				A52A68BA7072103534DD8CC3 /* 📦 Embed Pods Frameworks */,
-				B4FCAC986590AAA89724A6C7 /* 📦 Copy Pods Resources */,
-				6512F63F703FA9D9D0CECEC4 /* Embed Pods Frameworks */,
-				021CC4AD289872C6545E6E6E /* Copy Pods Resources */,
+				806A254EDDECFEAB71A79D81 /* 📦 Embed Pods Frameworks */,
+				280AD81BC7A9D6D4C27D46AF /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,15 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
-				DC2EF3B38E8BB0978594E125 /* Check Pods Manifest.lock */,
-				99B14D3DA724E0C0BC5E265C /* 📦 Check Pods Manifest.lock */,
+				586D5A29E50128D68F8B8F08 /* 📦 Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				6474186FED88468032D109A7 /* 📦 Embed Pods Frameworks */,
-				BDA3AE183E2CBC06618C7FD8 /* 📦 Copy Pods Resources */,
-				1E0D126BE04D46E500DABC51 /* Embed Pods Frameworks */,
-				B60442876E69AD7CB43DFFF3 /* Copy Pods Resources */,
+				7F0CA4ACB758536ED79458F4 /* 📦 Embed Pods Frameworks */,
+				653BCB96471B1C4ECF11E82C /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,127 +296,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		021CC4AD289872C6545E6E6E /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Artsy-UIButtons/Pods-Artsy-UIButtons-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1E0D126BE04D46E500DABC51 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4AD4AD34879DFA6FD1F39B23 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6474186FED88468032D109A7 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6512F63F703FA9D9D0CECEC4 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Artsy-UIButtons/Pods-Artsy-UIButtons-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		849BD16B4529CDB82A32F890 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		99B14D3DA724E0C0BC5E265C /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		A52A68BA7072103534DD8CC3 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Artsy-UIButtons/Pods-Artsy-UIButtons-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B4FCAC986590AAA89724A6C7 /* 📦 Copy Pods Resources */ = {
+		280AD81BC7A9D6D4C27D46AF /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -437,22 +311,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Artsy-UIButtons/Pods-Artsy-UIButtons-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B60442876E69AD7CB43DFFF3 /* Copy Pods Resources */ = {
+		586D5A29E50128D68F8B8F08 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		BDA3AE183E2CBC06618C7FD8 /* 📦 Copy Pods Resources */ = {
+		653BCB96471B1C4ECF11E82C /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -467,14 +341,44 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DC2EF3B38E8BB0978594E125 /* Check Pods Manifest.lock */ = {
+		7F0CA4ACB758536ED79458F4 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		806A254EDDECFEAB71A79D81 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Artsy-UIButtons/Pods-Artsy-UIButtons-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		929B9510BA02937909C8B2F7 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -623,7 +527,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3344C7E227E2A8E8B5087291 /* Pods-Artsy-UIButtons.debug.xcconfig */;
+			baseConfigurationReference = 3DF3A45372E0AEAC13136B5A /* Pods-Artsy-UIButtons.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -638,7 +542,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A3A53B24607E174883D5DBF /* Pods-Artsy-UIButtons.release.xcconfig */;
+			baseConfigurationReference = 87D787A03C73C6DFC893C281 /* Pods-Artsy-UIButtons.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -653,7 +557,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABA984F561A12505FE120C91 /* Pods-Tests.debug.xcconfig */;
+			baseConfigurationReference = FEA4090DF2A595FBEE435A33 /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Artsy-UIButtons.app/Artsy-UIButtons";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -676,7 +580,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BA8EC61D680A4C18972D20E /* Pods-Tests.release.xcconfig */;
+			baseConfigurationReference = 8AB669E1134AFD0FBFECF067 /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Artsy-UIButtons.app/Artsy-UIButtons";
 				FRAMEWORK_SEARCH_PATHS = (
