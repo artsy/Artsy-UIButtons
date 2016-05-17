@@ -12,7 +12,7 @@ target 'Artsy-UIButtons' do
       inherit! :search_paths
         pod 'Specta'
         pod 'Expecta'
-        pod 'FBSnapshotTestCase', git: 'https://github.com/neonichu/ios-snapshot-test-case.git', commit: '9e88da88a7a3df2f80838449a5f1e71830179218'
+        pod 'FBSnapshotTestCase', git: 'https://github.com/orta/ios-snapshot-test-case.git'
         pod 'Expecta+Snapshots'
     end
 end
