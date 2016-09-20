@@ -5,14 +5,14 @@ source 'https://github.com/artsy/Specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'Artsy-UIButtons' do
-    pod 'Artsy+UIFonts', :git => "https://github.com/artsy/Artsy-OSSUIFonts.git", :branch => "v2"
+    pod 'Artsy+UIFonts'
     pod "Artsy-UIButtons", :path => "../"
 
     target 'Tests' do
       inherit! :search_paths
         pod 'Specta'
         pod 'Expecta'
-        pod 'FBSnapshotTestCase', git: 'https://github.com/neonichu/ios-snapshot-test-case.git', commit: '9e88da88a7a3df2f80838449a5f1e71830179218'
+        pod 'FBSnapshotTestCase', '~>2.1.0'
         pod 'Expecta+Snapshots'
     end
 end
