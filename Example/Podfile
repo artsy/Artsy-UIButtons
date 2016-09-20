@@ -5,7 +5,7 @@ source 'https://github.com/artsy/Specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'Artsy-UIButtons' do
-    pod 'Artsy+UIFonts'
+    pod 'Artsy+UIFonts', :git => "https://github.com/artsy/Artsy-OSSUIFonts.git", :branch => "v2"
     pod "Artsy-UIButtons", :path => "../"
 
     target 'Tests' do

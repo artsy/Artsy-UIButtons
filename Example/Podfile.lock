@@ -1,6 +1,6 @@
 PODS:
   - Artsy+UIColors (3.0.1)
-  - Artsy+UIFonts (1.1.0)
+  - Artsy+UIFonts (2.0.0)
   - Artsy-UIButtons (2.0.1):
     - Artsy+UIColors (~> 3.0)
     - Artsy+UIFonts
@@ -19,7 +19,7 @@ PODS:
   - UIView+BooleanAnimations (1.0.2)
 
 DEPENDENCIES:
-  - Artsy+UIFonts
+  - Artsy+UIFonts (from `https://github.com/artsy/Artsy-OSSUIFonts.git`, branch `v2`)
   - Artsy-UIButtons (from `../`)
   - Expecta
   - Expecta+Snapshots
@@ -27,12 +27,20 @@ DEPENDENCIES:
   - Specta
 
 EXTERNAL SOURCES:
+  Artsy+UIFonts:
+    :branch: v2
+    :git: https://github.com/artsy/Artsy-OSSUIFonts.git
   Artsy-UIButtons:
     :path: "../"
 
+CHECKOUT OPTIONS:
+  Artsy+UIFonts:
+    :commit: e02ecc4d44107864ce8688bae9ea0d151486c3ae
+    :git: https://github.com/artsy/Artsy-OSSUIFonts.git
+
 SPEC CHECKSUMS:
   Artsy+UIColors: 10a2d71e9ffe1015be43d4e084d13ff4337aab97
-  Artsy+UIFonts: c51bb3b5cbf9c1a5fe198b4385d49133c5c71f5a
+  Artsy+UIFonts: b1c53a1f9998bfce96ef1b544191f846e7ed1b0e
   Artsy-UIButtons: e5835b8efca591d7a9cf2a2f41f6de2bd9dd2ac4
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   Expecta+Snapshots: c343f410c7a6392f3e22e78f94c44b6c0749a516
@@ -40,6 +48,6 @@ SPEC CHECKSUMS:
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
   UIView+BooleanAnimations: a760be9a066036e55f298b7b7350a6cb14cfcd97
 
-PODFILE CHECKSUM: 5af12b6e45e6382cb013662e7a888991c852b6a3
+PODFILE CHECKSUM: b8211bc911f59dc14a64043f09e00c143bad57ff
 
 COCOAPODS: 1.0.1
