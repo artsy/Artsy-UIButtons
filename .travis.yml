@@ -11,7 +11,7 @@ env:
 
 install:
         - bundle install --without development --deployment --jobs=3 --retry=3
-        - bundle exec pod repo update --project-directory=Example
+        - bundle exec pod repo update
         - bundle exec pod install --project-directory=Example
 
 cache:
