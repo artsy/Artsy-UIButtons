@@ -12,7 +12,7 @@ target 'Artsy-UIButtons' do
       inherit! :search_paths
         pod 'Specta'
         pod 'Expecta'
-        pod 'FBSnapshotTestCase', '~>2.1.0'
+        pod 'FBSnapshotTestCase/Core', '~>2.1.0'
         pod 'Expecta+Snapshots'
     end
 end
