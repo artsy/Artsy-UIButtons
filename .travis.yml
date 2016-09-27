@@ -10,14 +10,13 @@ env:
         - secure: "Wj72iTvNTKkYpwjMeTe4rQ6u4xY+SVwAmjFD/pqIjW5BET4Cq6LP4Rt0VgtVO11B6tCktVE0VdnhS1zs+ljCCaEes7yVJziYTKgwNd/PY9Ll0F2AZsJ64fxTr6caRI/GUhq+dYPGASO3S716+muiN6eqwRgWWUWPpTy6urtPMbk="
 
 install:
-        - bundle install --without development --deployment --jobs=3 --retry=3
-        - bundle exec pod repo update --silent
-        - bundle exec pod install --project-directory=Example
+    - bundle install --without development --deployment --jobs=3 --retry=3
+    - bundle exec pod install --project-directory=Example
 
 cache:
-        directories:
-                - vendor/bundle
-                - Example/Pods
+    directories:
+        - vendor/bundle
+        - Example/Pods
 
 before_script:
     - export LANG=en_US.UTF-8
