@@ -1,5 +1,9 @@
 # Artsy-UIButtons CHANGELOG
 
+## 2.0.3
+
+* Fixes for CocoaPods 1.0 dependency resolver and OSS fonts.
+
 ## 1.4.0
 
 * Add `-[ARUnderlineButton setUnderlinedTitle:underlineRange:state]` to easily set a title with partial underline.
