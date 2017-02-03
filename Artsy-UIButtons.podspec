@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Artsy-UIButtons"
-  s.version          = "2.0.3"
+  s.version          = "2.1.0"
   s.summary          = "Artsy's UIButton subclasses."
   s.homepage         = "https://github.com/artsy/Artsy-UIButtons"
   s.license          = 'MIT'
@@ -15,10 +15,6 @@ Pod::Spec.new do |s|
 
   s.frameworks = 'UIKit'
   s.dependency 'Artsy+UIColors', '~> 3.0'
-  if ENV['ARTSY_STAFF_MEMBER'] != nil || ENV['CI'] != nil
-    s.dependency 'Artsy+UIFonts'
-  else
-    s.dependency 'Artsy+OSSUIFonts'
-  end
+  s.dependency 'Artsy+UIFonts'
   s.dependency 'UIView+BooleanAnimations'
 end
