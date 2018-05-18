@@ -1,7 +1,7 @@
 PODS:
   - Artsy+UIColors (3.0.1)
   - Artsy+UIFonts (2.0.0)
-  - Artsy-UIButtons (2.0.2):
+  - Artsy-UIButtons (2.1.0):
     - Artsy+UIColors (~> 3.0)
     - Artsy+UIFonts
     - UIView+BooleanAnimations
@@ -37,7 +37,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Artsy+UIColors: 10a2d71e9ffe1015be43d4e084d13ff4337aab97
   Artsy+UIFonts: b1c53a1f9998bfce96ef1b544191f846e7ed1b0e
-  Artsy-UIButtons: 3ef4d1afe54f35d9d8c9512f3c2aedf61923a28f
+  Artsy-UIButtons: 8414a3f7a60ddc5b6876ac6a206a23a371641064
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   Expecta+Snapshots: c343f410c7a6392f3e22e78f94c44b6c0749a516
   FBSnapshotTestCase: 4607968e0dfa1e2772ec0d0098354f8b870c5753
@@ -46,4 +46,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: db5f7c1679c58f02e076b485442c8d0f1a385dd8
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.0.1
