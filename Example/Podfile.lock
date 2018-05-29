@@ -1,49 +1,59 @@
 PODS:
-  - Artsy+UIColors (3.0.1)
-  - Artsy+UIFonts (2.0.0)
-  - Artsy-UIButtons (2.0.2):
-    - Artsy+UIColors (~> 3.0)
-    - Artsy+UIFonts
-    - UIView+BooleanAnimations
+  - "Artsy+UIColors (3.0.1)"
+  - "Artsy+UIFonts (2.0.0)"
+  - Artsy-UIButtons (2.2.0):
+    - "Artsy+UIColors (~> 3.0)"
+    - "Artsy+UIFonts"
+    - "UIView+BooleanAnimations"
   - Expecta (1.0.5)
-  - Expecta+Snapshots (3.0.0):
+  - "Expecta+Snapshots (3.0.0)":
     - Expecta (~> 1.0)
     - FBSnapshotTestCase/Core (~> 2.0)
     - Specta (~> 1.0)
   - FBSnapshotTestCase/Core (2.1.3)
   - Specta (1.0.5)
-  - UIView+BooleanAnimations (1.0.2)
+  - "UIView+BooleanAnimations (1.0.2)"
 
 DEPENDENCIES:
-  - Artsy+UIFonts (from `https://github.com/artsy/Artsy-OSSUIFonts.git`, branch `v2`)
+  - "Artsy+UIFonts (from `https://github.com/artsy/Artsy-OSSUIFonts.git`, branch `v2`)"
   - Artsy-UIButtons (from `../`)
   - Expecta
-  - Expecta+Snapshots
+  - "Expecta+Snapshots"
   - FBSnapshotTestCase/Core (~> 2.1.0)
   - Specta
 
+SPEC REPOS:
+  https://github.com/artsy/Specs.git:
+    - "Artsy+UIColors"
+  https://github.com/cocoapods/specs.git:
+    - Expecta
+    - "Expecta+Snapshots"
+    - FBSnapshotTestCase
+    - Specta
+    - "UIView+BooleanAnimations"
+
 EXTERNAL SOURCES:
-  Artsy+UIFonts:
+  "Artsy+UIFonts":
     :branch: v2
     :git: https://github.com/artsy/Artsy-OSSUIFonts.git
   Artsy-UIButtons:
     :path: "../"
 
 CHECKOUT OPTIONS:
-  Artsy+UIFonts:
+  "Artsy+UIFonts":
     :commit: e02ecc4d44107864ce8688bae9ea0d151486c3ae
     :git: https://github.com/artsy/Artsy-OSSUIFonts.git
 
 SPEC CHECKSUMS:
-  Artsy+UIColors: 10a2d71e9ffe1015be43d4e084d13ff4337aab97
-  Artsy+UIFonts: b1c53a1f9998bfce96ef1b544191f846e7ed1b0e
-  Artsy-UIButtons: 3ef4d1afe54f35d9d8c9512f3c2aedf61923a28f
+  "Artsy+UIColors": 10a2d71e9ffe1015be43d4e084d13ff4337aab97
+  "Artsy+UIFonts": b1c53a1f9998bfce96ef1b544191f846e7ed1b0e
+  Artsy-UIButtons: e424516a02c8caecce183e723169919bd39a3242
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
-  Expecta+Snapshots: c343f410c7a6392f3e22e78f94c44b6c0749a516
+  "Expecta+Snapshots": c343f410c7a6392f3e22e78f94c44b6c0749a516
   FBSnapshotTestCase: 4607968e0dfa1e2772ec0d0098354f8b870c5753
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
-  UIView+BooleanAnimations: a760be9a066036e55f298b7b7350a6cb14cfcd97
+  "UIView+BooleanAnimations": a760be9a066036e55f298b7b7350a6cb14cfcd97
 
 PODFILE CHECKSUM: db5f7c1679c58f02e076b485442c8d0f1a385dd8
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.5.3
