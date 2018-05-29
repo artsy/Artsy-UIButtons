@@ -40,6 +40,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     [self setup];
 }
 
