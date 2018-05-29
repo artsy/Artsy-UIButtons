@@ -152,7 +152,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
     self.backgroundColors = [NSMutableDictionary dictionary];
     self.borderColors = [NSMutableDictionary dictionary];
 
-    self.titleLabel.font = [UIFont sansSerifFontWithSize:13];
+    self.titleLabel.font = [UIFont sansSerifFontWithSize:12];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
 
