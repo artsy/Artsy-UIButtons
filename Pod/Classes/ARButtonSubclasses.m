@@ -53,7 +53,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 {
     [super setEnabled:enabled];
     if (!self.shouldDimWhenDisabled) { return; }
-    CGFloat alpha = enabled ? 1 : 0.5;
+    CGFloat alpha = enabled ? 1 : 0.1;
     [UIView animateIf:animated duration:ARButtonAnimationDuration :^{
         self.alpha = alpha;
     }];

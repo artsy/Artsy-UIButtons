@@ -1,5 +1,13 @@
 # Artsy-UIButtons CHANGELOG
 
+## 2.2.2
+
+*  Changes the disabled transparency in all ARFlatButtons
+
+## 2.2.1
+
+*  Changes the font size in all buttons
+
 ## 2.0.3
 
 * Fixes for CocoaPods 1.0 dependency resolver and OSS fonts.
@@ -11,7 +19,7 @@
 
 ## 1.3.0
 
-* Updated to use new UIView+BooleanAnimations pod as a depedency (#2).
+* Updated to use new UIView+BooleanAnimations pod as a dependency (#2).
 
 ## 1.2.0
 * Ability to toggle whether changes that happen automatically with state change (color, alpha) should be animated,
