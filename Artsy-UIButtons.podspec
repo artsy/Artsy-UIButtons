@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Artsy-UIButtons"
-  s.version          = "2.2.0"
+  s.version          = "2.2.2"
   s.summary          = "Artsy's UIButton subclasses."
   s.homepage         = "https://github.com/artsy/Artsy-UIButtons"
   s.license          = 'MIT'

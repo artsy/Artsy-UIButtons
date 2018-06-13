@@ -40,6 +40,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     [self setup];
 }
 
@@ -52,7 +53,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 {
     [super setEnabled:enabled];
     if (!self.shouldDimWhenDisabled) { return; }
-    CGFloat alpha = enabled ? 1 : 0.5;
+    CGFloat alpha = enabled ? 1 : 0.1;
     [UIView animateIf:animated duration:ARButtonAnimationDuration :^{
         self.alpha = alpha;
     }];
@@ -152,7 +153,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
     self.backgroundColors = [NSMutableDictionary dictionary];
     self.borderColors = [NSMutableDictionary dictionary];
 
-    self.titleLabel.font = [UIFont sansSerifFontWithSize:13];
+    self.titleLabel.font = [UIFont sansSerifFontWithSize:12];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
 
