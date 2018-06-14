@@ -158,9 +158,9 @@ const CGFloat ARButtonAnimationDuration = 0.15;
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
 
     CALayer *layer = [self layer];
-    [layer setMasksToBounds:YES];
-    [layer setCornerRadius:2.0];
-    [layer setBorderWidth:1.0];
+    [layer setMasksToBounds: YES];
+    [layer setCornerRadius: 2.0];
+    [layer setBorderWidth: 1.0];
 }
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state
@@ -332,13 +332,14 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 {
     [super setup];
 
+    self.layer.borderWidth = 2;
+
     [self setBackgroundColor:[UIColor clearColor] forState:UIControlStateNormal animated:NO];
     [self setBorderColor:[UIColor whiteColor] forState:UIControlStateNormal animated:NO];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 
     [self setBackgroundColor:[UIColor artsyPurpleRegular] forState:UIControlStateHighlighted animated:NO];
     [self setBorderColor:[UIColor artsyPurpleRegular] forState:UIControlStateHighlighted animated:NO];
-
 }
 
 - (CGSize)intrinsicContentSize

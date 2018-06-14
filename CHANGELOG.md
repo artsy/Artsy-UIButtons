@@ -1,5 +1,9 @@
 # Artsy-UIButtons CHANGELOG
 
+## 2.2.3
+
+* ARClearFlatButton now has a two pixel width instead of a single pixel
+
 ## 2.2.2
 
 *  Changes the disabled transparency in all ARFlatButtons
