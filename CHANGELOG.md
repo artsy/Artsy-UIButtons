@@ -1,5 +1,9 @@
 # Artsy-UIButtons CHANGELOG
 
+## 2.3.1
+
+* ARFlatButtons won't crash if you pass an empty string in as the title (used in Eigen tests)
+
 ## 2.3.0
 
 * All ARFlatButtons now use sentence case, default to 50px in height and use Unica sans

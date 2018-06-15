@@ -71,6 +71,11 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 
 - (void)setTitle:(NSString *)title forState:(UIControlState)state
 {
+    if (!title.length) {
+        [super setTitle:title forState:state];
+        return;
+    }
+
     NSString *cap = [[title substringToIndex:1] uppercaseString];
     NSString *rest = [[title substringFromIndex:1] lowercaseString];
     [super setTitle:[cap stringByAppendingString:rest] forState:state];
