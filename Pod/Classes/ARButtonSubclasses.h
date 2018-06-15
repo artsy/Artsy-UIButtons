@@ -19,20 +19,20 @@
 @interface ARInquireButton : ARUnderlineButton
 @end
 
-@interface ARUppercaseButton : ARButton
+@interface ARSentenceCaseButton : ARButton
 @end
 
-@interface ARModalMenuButton : ARUppercaseButton
+@interface ARModalMenuButton : ARSentenceCaseButton
 @end
 
-@interface ARNavigationTabButton : ARUppercaseButton
+@interface ARNavigationTabButton : ARSentenceCaseButton
 @end
 
 // ARFlatButton is effectively an abstract class. It provides no colors for text, background or border.
 // The only time you might want to instantiate and customize a one-off ARFlatButton is when none of
 // the generic subclasses is suitable.
 
-@interface ARFlatButton : ARUppercaseButton
+@interface ARFlatButton : ARSentenceCaseButton
 - (void)setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state;
 - (void)setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state animated:(BOOL)animated;
 

@@ -67,12 +67,13 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 
 @end
 
-@implementation ARUppercaseButton
+@implementation ARSentenceCaseButton
 
 - (void)setTitle:(NSString *)title forState:(UIControlState)state
 {
-    title = [title uppercaseString];
-    [super setTitle:title forState:state];
+    NSString *cap = [[title substringToIndex:1] uppercaseString];
+    NSString *rest = [[title substringFromIndex:1] lowercaseString];
+    [super setTitle:[cap stringByAppendingString:rest] forState:state];
 }
 
 @end
@@ -153,7 +154,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
     self.backgroundColors = [NSMutableDictionary dictionary];
     self.borderColors = [NSMutableDictionary dictionary];
 
-    self.titleLabel.font = [UIFont sansSerifFontWithSize:12];
+    self.titleLabel.font = [UIFont displaySansSerifFontWithSize:14];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
 
@@ -321,7 +322,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 
 - (CGSize)intrinsicContentSize
 {
-    return (CGSize){ 40, 40 };
+    return (CGSize){ 40, 50 };
 }
 
 @end

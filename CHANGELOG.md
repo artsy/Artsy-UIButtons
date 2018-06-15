@@ -1,5 +1,9 @@
 # Artsy-UIButtons CHANGELOG
 
+## 2.3.0
+
+* All ARFlatButtons now use sentence case, default to 50px in height and use Unica sans
+
 ## 2.2.3
 
 * ARClearFlatButton now has a two pixel width instead of a single pixel
