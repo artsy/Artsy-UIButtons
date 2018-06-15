@@ -22,9 +22,6 @@
 @interface ARSentenceCaseButton : ARButton
 @end
 
-@interface ARModalMenuButton : ARSentenceCaseButton
-@end
-
 @interface ARNavigationTabButton : ARSentenceCaseButton
 @end
 
@@ -53,12 +50,4 @@
 @end
 
 @interface ARBlackFlatButton : ARFlatButton
-@end
-
-// A transparent button for hero units. Color specifies border and text `color`. When active,
-// button background becomes opaque with `color` and text becomes `inverseColor`
-@interface ARHeroUnitButton : ARFlatButton
-- (void)setColor:(UIColor *)color;
-- (void)setColor:(UIColor *)color animated:(BOOL)animated;
-- (void)setInverseColor:(UIColor *)inverseColor;
 @end

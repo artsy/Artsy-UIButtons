@@ -1,5 +1,9 @@
 # Artsy-UIButtons CHANGELOG
 
+## 2.3.2
+
+* Removes unused buttons, changes more buttons to use the right fonts and heights
+
 ## 2.3.1
 
 * ARFlatButtons won't crash if you pass an empty string in as the title (used in Eigen tests)

@@ -50,12 +50,6 @@ describe(@"ARNavigationTabButton", ^{
     });
 });
 
-describe(@"ARModalMenuButton", ^{
-    ARModalMenuButton *button = [[ARModalMenuButton alloc] initWithFrame:CGRectMake(0, 0, 300, 46)];
-    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    itBehavesLike(@"ar button", @{@"button": button});
-});
-
 describe(@"ARUnderlineButton", ^{
     {
         ARUnderlineButton *button = [[ARUnderlineButton alloc] initWithFrame:CGRectMake(0, 0, 300, 24)];
@@ -129,11 +123,5 @@ describe(@"ARBlackFlatButton", ^{
     itBehavesLike(@"flat button", @{@"button": button});
 });
 
-describe(@"ARHeroUnitButton", ^{
-    ARHeroUnitButton *button = [[ARHeroUnitButton alloc] initWithFrame:CGRectMake(0, 0, 300, 46)];
-    [button setColor:[UIColor yellowColor] animated:NO];
-    [button setInverseColor:[UIColor blackColor]];
-    itBehavesLike(@"flat button", @{@"button": button});
-});
 
 SpecEnd
