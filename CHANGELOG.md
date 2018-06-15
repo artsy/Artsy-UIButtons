@@ -1,5 +1,9 @@
 # Artsy-UIButtons CHANGELOG
 
+## 2.3.3
+
+* Fixes the ARMenuButton height
+
 ## 2.3.2
 
 * Removes unused buttons, changes more buttons to use the right fonts and heights

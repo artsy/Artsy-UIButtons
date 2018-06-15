@@ -319,7 +319,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 
 - (CGSize)intrinsicContentSize
 {
-    return (CGSize){ 40, 50 };
+    return (CGSize){ 40, 40 };
 }
 
 @end
