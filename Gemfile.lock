@@ -69,7 +69,7 @@ GEM
       aws-sdk-v1 (~> 1.52)
       mustache (~> 0.99)
     thread_safe (0.3.6)
-    tzinfo (1.2.5)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     xcodeproj (1.5.9)
       CFPropertyList (>= 2.3.3, < 4.0)
