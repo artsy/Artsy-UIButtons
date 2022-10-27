@@ -32,11 +32,11 @@ describe(@"ARButton", ^{
     itBehavesLike(@"ar button", @{@"button": button});
 });
 
-describe(@"ARUppercaseButton", ^{
-    it(@"capitalizes title", ^{
-        ARUppercaseButton *button = [[ARUppercaseButton alloc] initWithFrame:CGRectMake(0, 0, 300, 46)];
-        [button setTitle:@"Button Title" forState:UIControlStateNormal];
-        expect(button.titleLabel.text).to.equal(@"BUTTON TITLE");
+describe(@"ARSentenceCaseButton", ^{
+    it(@"sentence cases a title", ^{
+        ARSentenceCaseButton *button = [[ARSentenceCaseButton alloc] initWithFrame:CGRectMake(0, 0, 300, 46)];
+        [button setTitle:@"BUTTON TITLE" forState:UIControlStateNormal];
+        expect(button.titleLabel.text).to.equal(@"Button title");
     });
 });
 
@@ -48,12 +48,6 @@ describe(@"ARNavigationTabButton", ^{
         button.selected = YES;
         expect(button).to.haveValidSnapshot();
     });
-});
-
-describe(@"ARModalMenuButton", ^{
-    ARModalMenuButton *button = [[ARModalMenuButton alloc] initWithFrame:CGRectMake(0, 0, 300, 46)];
-    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    itBehavesLike(@"ar button", @{@"button": button});
 });
 
 describe(@"ARUnderlineButton", ^{
@@ -129,11 +123,5 @@ describe(@"ARBlackFlatButton", ^{
     itBehavesLike(@"flat button", @{@"button": button});
 });
 
-describe(@"ARHeroUnitButton", ^{
-    ARHeroUnitButton *button = [[ARHeroUnitButton alloc] initWithFrame:CGRectMake(0, 0, 300, 46)];
-    [button setColor:[UIColor yellowColor] animated:NO];
-    [button setInverseColor:[UIColor blackColor]];
-    itBehavesLike(@"flat button", @{@"button": button});
-});
 
 SpecEnd

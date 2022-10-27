@@ -1,5 +1,21 @@
 # Artsy-UIButtons CHANGELOG
 
+## 2.3.3
+
+* Fixes the ARMenuButton height
+
+## 2.3.2
+
+* Removes unused buttons, changes more buttons to use the right fonts and heights
+
+## 2.3.1
+
+* ARFlatButtons won't crash if you pass an empty string in as the title (used in Eigen tests)
+
+## 2.3.0
+
+* All ARFlatButtons now use sentence case, default to 50px in height and use Unica sans
+
 ## 2.2.3
 
 * ARClearFlatButton now has a two pixel width instead of a single pixel

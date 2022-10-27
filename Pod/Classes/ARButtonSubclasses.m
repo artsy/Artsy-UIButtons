@@ -67,12 +67,18 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 
 @end
 
-@implementation ARUppercaseButton
+@implementation ARSentenceCaseButton
 
 - (void)setTitle:(NSString *)title forState:(UIControlState)state
 {
-    title = [title uppercaseString];
-    [super setTitle:title forState:state];
+    if (!title.length) {
+        [super setTitle:title forState:state];
+        return;
+    }
+
+    NSString *cap = [[title substringToIndex:1] uppercaseString];
+    NSString *rest = [[title substringFromIndex:1] lowercaseString];
+    [super setTitle:[cap stringByAppendingString:rest] forState:state];
 }
 
 @end
@@ -112,7 +118,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 {
     [super setup];
 
-    self.titleLabel.font = [UIFont serifFontWithSize:16];
+    self.titleLabel.font = [UIFont displaySansSerifFontWithSize:12];
 
     [self setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
     [self setTitleColor:[UIColor artsyGrayBold] forState:UIControlStateNormal];
@@ -125,15 +131,6 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 
 @end
 
-@implementation ARModalMenuButton
-
-- (void)setup
-{
-    [super setup];
-    self.titleLabel.font = [UIFont sansSerifFontWithSize:12];
-}
-
-@end
 
 @interface ARFlatButton ()
 @property (nonatomic, strong) NSMutableDictionary *backgroundColors;
@@ -153,7 +150,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
     self.backgroundColors = [NSMutableDictionary dictionary];
     self.borderColors = [NSMutableDictionary dictionary];
 
-    self.titleLabel.font = [UIFont sansSerifFontWithSize:12];
+    self.titleLabel.font = [UIFont displayMediumSansSerifFontWithSize:14];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
 
@@ -314,7 +311,8 @@ const CGFloat ARButtonAnimationDuration = 0.15;
     [self bringSubviewToFront:self.titleLabel];
 }
 
-- (void)changeBackgroundColorForStateChangeAnimated:(BOOL)animated{
+- (void)changeBackgroundColorForStateChangeAnimated:(BOOL)animated
+{
     [self changeBackgroundColorForStateChangeAnimated:animated layer:self.backgroundLayer];
 }
 
@@ -344,7 +342,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 
 - (CGSize)intrinsicContentSize
 {
-    return (CGSize){ 280, 44 };
+    return (CGSize){ 280, 50 };
 }
 
 @end
@@ -367,7 +365,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 
 - (CGSize)intrinsicContentSize
 {
-    return (CGSize){ 280, 44 };
+    return (CGSize){ 280, 50 };
 }
 
 @end
@@ -408,7 +406,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 - (void)setup
 {
     [super setup];
-    self.titleLabel.font = [UIFont sansSerifFontWithSize:12];
+    self.titleLabel.font = [UIFont displayMediumSansSerifFontWithSize:12];
     [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self setTitleColor:[UIColor artsyPurpleRegular] forState:UIControlStateSelected];
 }
@@ -423,35 +421,6 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 
 @end
 
-@implementation ARHeroUnitButton
-
-- (void)setup
-{
-    [super setup];
-    [self.layer setBorderWidth:2];
-    self.titleLabel.font = [UIFont sansSerifFontWithSize:11];
-    self.contentEdgeInsets = UIEdgeInsetsMake(10, 20, 10, 20);
-    [self setBackgroundColor:[UIColor clearColor] forState:UIControlStateNormal animated:NO];
-}
-
-- (void)setColor:(UIColor *)color
-{
-    [self setColor:color animated:self.shouldAnimateStateChange];
-}
-
-- (void)setColor:(UIColor *)color animated:(BOOL)animated
-{
-    [self setTitleColor:color forState:UIControlStateNormal];
-    [self setBorderColor:color forState:UIControlStateNormal animated:animated];
-    [self setBackgroundColor:color forState:UIControlStateHighlighted animated:animated];
-}
-
-- (void)setInverseColor:(UIColor *)inverseColor
-{
-    [self setTitleColor:inverseColor forState:UIControlStateHighlighted];
-}
-
-@end
 
 @implementation ARBlackFlatButton
 
@@ -459,7 +428,6 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 {
     [super setup];
 
-    self.titleLabel.font = [UIFont sansSerifFontWithSize:15];
     self.layer.borderWidth = 0;
 
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -470,7 +438,7 @@ const CGFloat ARButtonAnimationDuration = 0.15;
 
 - (CGSize)intrinsicContentSize
 {
-    return (CGSize){ 280, 46 };
+    return (CGSize){ 280, 50 };
 }
 
 @end
